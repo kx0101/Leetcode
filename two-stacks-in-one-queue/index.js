@@ -9,13 +9,13 @@ class Queue {
     }
  
     remove() {
-        while (this.stackOne.peek() !== undefined) {
+        while (this.stackOne.peek()) {
             this.stackTwo.push(this.stackOne.pop())
         }
  
         const removed = this.stackTwo.pop()
  
-        while (this.stackTwo.peek() !== undefined) {
+        while (this.stackTwo.peek()) {
             this.stackOne.push(this.stackTwo.pop())
         }
  
@@ -23,13 +23,13 @@ class Queue {
     }
  
     peek() {
-        while (this.stackOne.peek() !== undefined) {
+        while (this.stackOne.peek()) {
             this.stackTwo.push(this.stackOne.pop())
         }
  
         const peeked = this.stackTwo.peek()
  
-        while (this.stackTwo.peek() !== undefined) {
+        while (this.stackTwo.peek()) {
             this.stackOne.push(this.stackTwo.pop())
         }
  
