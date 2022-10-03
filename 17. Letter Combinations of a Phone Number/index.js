@@ -20,7 +20,7 @@ var letterCombinations = function(digits) {
         temp = [];
         for(let j = 0; j < res.length; j++) {
             for(let k = lettersTwo.length - 1; k >= 0; k--) {
-                if (k == 0) {
+                if (k === 0) {
                     res[j] += lettersTwo[k]
                 } else {
                     temp.push(res[j] + lettersTwo[k]);
