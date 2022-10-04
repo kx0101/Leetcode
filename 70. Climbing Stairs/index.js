@@ -1,13 +1,19 @@
+/**
+ * @param {number} n
+ * @return {number}
+ */
 var climbStairs = function(n) {
-    let w1 = 1;
-    let w2 = 2;
-    let w = n;
-    
-    for(let i = 3; i <= n; i++) {
-        w = w1 + w2;
-        w1 = w2;
-        w2 = w;
+    if (n == 1) {
+        return 1;
     }
     
-    return w;
+    let result = new Array(n);
+    result[1] = 1;
+    result[2] = 2;
+    
+    for(let i = 3; i <= n; i++) {
+        result[i] = result[i - 1] + result[i - 2];
+    }
+    
+    return result[n];
 };
