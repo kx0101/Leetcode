@@ -10,23 +10,20 @@
  * @return {ListNode}
  */
 var swapPairs = function(head) {
-    let dummyHead = new ListNode(-1);
-    dummyHead.next = head;
+    let dummy = new ListNode(0, head);
+    let [prev, curr] = [dummy, head];
     
-    let prevNode = dummyHead;
-    
-    while (head && head.next) {
+    while (curr && curr.next) {
+        let nextPair = curr.next.next;
+        let second = curr.next;
         
-        let firstNode = head;
-        let secondNode = head.next;
+        second.next = curr;
+        curr.next = nextPair;
+        prev.next = second;
         
-        prevNode.next = secondNode;
-        firstNode.next = secondNode.next;
-        secondNode.next = firstNode;
-        
-        prevNode = firstNode;
-        head = firstNode.next;
+        prev = curr;
+        curr = nextPair;
     }
     
-    return dummyHead.next;
+    return dummy.next;
 };
