@@ -1,44 +1,38 @@
-/**
- * @param {number} n
- * @param {number[][]} reservedSeats
- * @return {number}
- */
 var maxNumberOfFamilies = function(n, reservedSeats) {
-    let map = new Map();
     
-    for(let i = 0; i < reservedSeats.length; i++) {
-        let reserved;
-        
-        if (map.has(reservedSeats[i][0])) {
-            reserved = map.get(reservedSeats[i][0]);
-        } else {
-            reserved = [];
-            map.set(reservedSeats[i][0], reserved);
-        }
-        
-        reserved[reservedSeats[i][1]] = true;
-    }
+    reservedSeats = reservedSeats.sort((a, b) => a[0] - b[0]);
     
-    let seats = 0;
-    let groups = (n - map.size) * 2;
+    let [left, mid, right] = [1, 1, 1];
     
-    map.forEach((reserved, key) => {
-        let leftAisle1 = !reserved[2] && !reserved[3];
-        let rightAisle1 = !reserved[4] && !reserved[5];
-        let leftAisle2 = !reserved[6] && !reserved[7];
-        let rightAisle2 = !reserved[8] && !reserved[9];
-        
-        if (leftAisle1 && rightAisle1) {
-            groups++;
+    let currRow = 0
+    let result =- 2
+    
+    for (let [row, col] of reservedSeats) {
+        if (currRow !== row) {
+            if (row !== currRow + 1) result += (row - currRow - 1) * 2
             
-            if (leftAisle2 && rightAisle2) {
-                groups++;
-            }
-        } else if ((rightAisle1 && leftAisle2) || (leftAisle2 && rightAisle2)) {
-            groups++;
+            result += Math.max(mid, right + left)
+            currRow = row
+            left = 1;
+            right = 1;
+            mid = 1;
         }
         
-    })
-    
-    return groups;
+        if (col === 2|| col === 3) left = 0
+
+        if (col === 4|| col === 5){
+            left = 0;
+            mid = 0;
+        }
+        
+        if (col === 6 || col === 7){
+            mid = 0;
+            right = 0;
+        }
+
+        if (col === 8 || col === 9) right = 0
+
+    }
+
+    return result + Math.max(mid, right + left) + (n - currRow) * 2
 };
