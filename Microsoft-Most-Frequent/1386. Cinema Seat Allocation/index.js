@@ -18,9 +18,9 @@ var maxNumberOfFamilies = function(n, reservedSeats) {
             mid = 1;
         }
         
-        if (col === 2|| col === 3) left = 0
+        if (col === 2 || col === 3) left = 0
 
-        if (col === 4|| col === 5){
+        if (col === 4 || col === 5){
             left = 0;
             mid = 0;
         }
