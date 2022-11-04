@@ -1,48 +1,24 @@
-// Solution without modifying the data, although I am getting an error of Maximum call stack size exceeded.
+function dfs(grid: string[][], y: number, x: number, visited: boolean[][]) {
+  if (y < 0 || y === grid.length || x < 0 || x === grid[0].length || visited[y][x] === true) return;
+  if (grid[y][x] === '1') visited[y][x] = true;
+  else return;
+  dfs(grid, y + 1, x, visited)
+  dfs(grid, y - 1, x, visited)
+  dfs(grid, y, x + 1, visited)
+  dfs(grid, y, x - 1, visited)
+}
 
-
-var numIslands = function(grid) {
-     if (grid.length == 0) {
-      return 0;
-    }
-
-    var count = 0;
-
-    var z = new Array(grid[0].length).fill(0);
-    var visit = new Array(grid.length);
-
-    for (let i = 0; i < visit.length; i++) {
-        visit[i] = z;
-    }
-
-    function traverse(x, y, grid, visit, count) {
-        var col = grid.length;
-        var row = grid[0].length;
-        if (x >= 0 && y >= 0 && x < row && y < col) {
-            visit[x][y] = 1;
-        } else {
-            return;
-        }
-        if (grid[x][y] != 1) {
-            return;
-        } else {
-            traverse(x + 1, y, grid, visit, count);
-            traverse(x - 1, y, grid, visit, count);
-            traverse(x, y + 1, grid, visit, count);
-            traverse(x, y - 1, grid, visit, count);
-            count++;
-        }
-    }
-
-    for (i = 0; i < grid.length; i++) {
-        for (let j = 0; j < grid[0].length; j++) {
-            if (visit[i][j] == 0) {
-                traverse(i, j, grid, visit, count);
-            } else {
-                continue;
+function numIslands(grid: string[][]): number {
+    if (!grid) return 0;
+    let counter = 0;
+    let visited = Array.from(Array(grid.length), ()=> Array(grid[0].length).fill(false));
+    for (let row = 0; row < grid.length; row++) {
+        for(let col =0; col < grid[0].length; col ++) {
+            if (grid[row][col] === '1' && visited[row][col] === false) {
+                counter++;
+                dfs(grid, row,col, visited);
             }
         }
     }
-
-    return count;
+    return counter;
 };
