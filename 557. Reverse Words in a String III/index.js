@@ -1,13 +1,15 @@
-var reverseWords = function(s) {
-    let array = s.split(" ");
-    let returnedArray = [];
-    
-    for (let i = 0; i < array.length; i++) {
-        returnedArray.push(array[i].split("").reverse().join(""));
-    }
-    
-    return returnedArray.join(" ");
-};
+var reverseWords = function (s) {
+  let res = '';
+  let word = '';
 
-Runtime: 79 ms
-Memory Usage: 48.5 MB
+  for (let c of s) {
+    if (c === ' ') {
+      res += word + c;
+      word = '';
+    } else {
+      word = c + word;
+    }
+  }
+
+  return res + word;
+};
