@@ -1,9 +1,5 @@
 ## Microsoft 2022 Internship Prep
 
-
-
-[catrinachen@microsoft.com](mailto:catrinachen@microsoft.com)  for other company deadline Catrina Chen
-
 **Resources given from the email:**
 
 - C# for beginners: https://www.youtube.com/playlist?list=PLdo4fOcmZ0oVxKLQCHpiUWun7vlJJvUiN
