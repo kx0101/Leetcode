@@ -70,17 +70,17 @@ Write a Bubble sort and describe it's complexity
 - ⭐️⭐️⭐️⭐️⭐️ LRU Cache (50 times): https://leetcode.com/problems/lru-cache/   ⭐️⭐️⭐️⭐️⭐️⭐️
 - ⭐️⭐️⭐️⭐️⭐️ String Compression (13 times): https://leetcode.com/problems/string-compression/  
 - Meeting Rooms II (19 times): https://leetcode.com/problems/meeting-rooms-ii/
-- <s>Merge Intervals (30 times): https://leetcode.com/problems/merge-intervals/ </s>
-- <s>Spiral Matrix (27 times): https://leetcode.com/problems/spiral-matrix/ </s>
+- Merge Intervals (30 times): https://leetcode.com/problems/merge-intervals/
+- Spiral Matrix (27 times): https://leetcode.com/problems/spiral-matrix/
 - Search in Rotated Sorted Array (20 times): https://leetcode.com/problems/search-in-rotated-sorted-array/ 
-- <s>https://leetcode.com/problems/excel-sheet-column-number/ </s>
-- <s>Design HashMap (18 times): https://leetcode.com/problems/design-hashmap/ </s>
+- https://leetcode.com/problems/excel-sheet-column-number/
+- Design HashMap (18 times): https://leetcode.com/problems/design-hashmap/
 - https://www.geeksforgeeks.org/maximum-sum-path-across-two-arrays/
 - Maximum Subarray (13 times): https://leetcode.com/problems/maximum-subarray/ 
-- <s> Min Stack (11 times): https://leetcode.com/problems/min-stack/ </s>
+- Min Stack (11 times): https://leetcode.com/problems/min-stack/
 - Minimum Deletions to Make Character Frequencies Unique (13 times): https://leetcode.com/problems/minimum-deletions-to-make-character-frequencies-unique/ 
 - Course Schedule (15 times): https://leetcode.com/problems/course-schedule/ 
-- <s>Serialize and Deserialize Binary Tree (11 times): https://leetcode.com/problems/serialize-and-deserialize-binary-tree/ </s>
+- Serialize and Deserialize Binary Tree (11 times): https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
 - Add Two Numbers (11 times): https://leetcode.com/problems/add-two-numbers/
 - Copy List with Random Pointer (11 times): https://leetcode.com/problems/copy-list-with-random-pointer/ 
 - Merge Sorted Array (11 times): https://leetcode.com/problems/merge-sorted-array/
@@ -88,7 +88,7 @@ Write a Bubble sort and describe it's complexity
 - Longest Substring with At Most K Distinct Characters (11 times): https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/ 
 - Find Minimum in Rotated Sorted Array (10 times): https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/ 
 - Subarray Sum Equals K (10 times): https://leetcode.com/problems/subarray-sum-equals-k/ 
-- <s>Basic Calculator (10 times): https://leetcode.com/problems/basic-calculator/</s>
+- Basic Calculator (10 times): https://leetcode.com/problems/basic-calculator/
 - Longest Happy String (10 times): https://leetcode.com/problems/longest-happy-string/
 - 3Sum (9 times): https://leetcode.com/problems/3sum/ 
 - Find All Anagrams in a String (9 times): https://leetcode.com/problems/find-all-anagrams-in-a-string/
@@ -110,7 +110,7 @@ Write a Bubble sort and describe it's complexity
 - Search a 2D Matrix II (7 times): https://leetcode.com/problems/search-a-2d-matrix-ii/ 
 - Boundary of Binary Tree (7 times): https://leetcode.com/problems/boundary-of-binary-tree/ 
 - Insert into a Sorted Circular Linked List (7 times): https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/ 
-- <s>Wildcard Matching (7 times): https://leetcode.com/problems/wildcard-matching/ </s>
+- Wildcard Matching (7 times): https://leetcode.com/problems/wildcard-matching/
 - Single Element in a Sorted Array (7 times): https://leetcode.com/problems/single-element-in-a-sorted-array/ 
 - LFU Cache (7 times): https://leetcode.com/problems/lfu-cache/ 
 - Max Stack (7 times): https://leetcode.com/problems/max-stack/ 
@@ -121,17 +121,17 @@ Write a Bubble sort and describe it's complexity
 - Serialize and Deserialize N-ary Tree (6 times): https://leetcode.com/problems/serialize-and-deserialize-n-ary-tree/ 
 - https://leetcode.com/problems/cinema-seat-allocation/
 - Find Peak Element (6 times): https://leetcode.com/problems/find-peak-element/
-- <s>Roman to Integer (6 times): https://leetcode.com/problems/roman-to-integer/ </s>
-- <s>Binary Tree Maximum Path Sum (7 times): https://leetcode.com/problems/binary-tree-maximum-path-sum/ </s>
-- <s>Top K Frequent Words (7 times): https://leetcode.com/problems/top-k-frequent-words/ </s>
-- <s>First Unique Character in a String (7 times): https://leetcode.com/problems/first-unique-character-in-a-string/ </s>
-- <s>Count Good Nodes in Binary Tree (129 times): https://leetcode.com/problems/count-good-nodes-in-binary-tree/</s>  ✅
-- <s>Sign of the Product of an Array (76 times): https://leetcode.com/problems/sign-of-the-product-of-an-array/ </s>✅
-- <s>Longest Substring Without Repeating Characters (23 times): https://leetcode.com/problems/longest-substring-without-repeating-characters/ </s>✅
-- <s>Merge k Sorted Lists (19 times): https://leetcode.com/problems/merge-k-sorted-lists/ </s>
-- <s>Reverse Words in a String (14 times): https://leetcode.com/problems/reverse-words-in-a-string/</s>
-- <s>Integer to English Words (12 times): https://leetcode.com/problems/integer-to-english-words/ </s>
-- <s>Binary Tree Zigzag Level Order Traversal (12 times): https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ </s>
+- Roman to Integer (6 times): https://leetcode.com/problems/roman-to-integer/
+- Binary Tree Maximum Path Sum (7 times): https://leetcode.com/problems/binary-tree-maximum-path-sum/
+- Top K Frequent Words (7 times): https://leetcode.com/problems/top-k-frequent-words/
+- First Unique Character in a String (7 times): https://leetcode.com/problems/first-unique-character-in-a-string/
+- Count Good Nodes in Binary Tree (129 times): https://leetcode.com/problems/count-good-nodes-in-binary-tree/
+- Sign of the Product of an Array (76 times): https://leetcode.com/problems/sign-of-the-product-of-an-array/ 
+- Longest Substring Without Repeating Characters (23 times): https://leetcode.com/problems/longest-substring-without-repeating-characters/ 
+- Merge k Sorted Lists (19 times): https://leetcode.com/problems/merge-k-sorted-lists/
+- Reverse Words in a String (14 times): https://leetcode.com/problems/reverse-words-in-a-string/
+- Integer to English Words (12 times): https://leetcode.com/problems/integer-to-english-words/
+- Binary Tree Zigzag Level Order Traversal (12 times): https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/ 
 
 
 
