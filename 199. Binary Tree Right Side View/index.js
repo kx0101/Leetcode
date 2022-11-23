@@ -11,24 +11,21 @@
  * @return {number[]}
  */
 var rightSideView = function(root) {
+    if (!root) return [];
+    
+    let q = [root];
     let result = [];
-    if (!root) return result;
     
-    
-    function dfs(root, level) {
-        if (level === result.length) {
-            result.push(root.val);
-        }
-        
-        if (root.right) {
-            dfs(root.right, level + 1);
-        }
-        
-        if (root.left) {
-            dfs(root.left, level + 1);
+    while (q.length) {
+        let length = q.length;
+        for(let i = 0; i < length; i++) {
+            let curr = q.shift();
+            if (i === length - 1) result.push(curr.val);
+            if (curr.left) q.push(curr.left);
+            if (curr.right) q.push(curr.right);
         }
     }
     
-    dfs(root, 0);
     return result;
+    
 };
