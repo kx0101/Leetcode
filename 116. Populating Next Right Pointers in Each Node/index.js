@@ -15,22 +15,20 @@
 var connect = function(root) {
     if (!root) return null;
     
-    let leftmost = root;
+    let [curr, next] = [root, root.left];
     
-    while (leftmost.left) {
-        let head = leftmost;
+    while (curr && next) {
+        curr.left.next = curr.right;
         
-        while (head) {
-            head.left.next = head.right;
-            
-            if (head.next) {
-                head.right.next = head.next.left;
-            }
-            
-            head = head.next;
+        if (curr.next) {
+            curr.right.next = curr.next.left;
         }
         
-        leftmost = leftmost.left;
+        curr = curr.next;
+        if (!curr) {
+            curr = next;
+            next = curr.left;
+        }
     }
     
     return root;
