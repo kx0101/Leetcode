@@ -5,32 +5,23 @@
 var findMin = function(nums) {
     let left = 0;
     let right = nums.length - 1;
+    let result = nums[0];
     
-    if (nums.length === 1) {
-        return nums[0];
-    }
-    
-    if (nums[right] > nums[0]) {
-        return nums[0];
-    }
-    
-    while(left <= right) {
+    while (left <= right) {
+        if (nums[left] < nums[right]) {
+            result = Math.min(result, nums[left])
+            break;
+        }
+        
         let mid = Math.floor((left + right) / 2);
+        result = Math.min(result, nums[mid]);
         
-        if (nums[mid] > nums[mid + 1 ]) {
-            return nums[mid + 1];
-        }
-        
-        if (nums[mid - 1] > nums[mid]) {
-            return nums[mid];
-        }
-        
-        if (nums[mid] > nums[0]) {
+        if (nums[mid] >= nums[left]) {
             left = mid + 1;
         } else {
             right = mid - 1;
         }
     }
     
-    return -1;
+    return result;
 };
