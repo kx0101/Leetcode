@@ -4,46 +4,29 @@
  * @return {number}
  */
 var findKthLargest = function(nums, k) {
-    return quickSelect(nums, 0, nums.length - 1, k);
-};
-
-function quickSelect(arr, start, end, k) {
-    const pivotIndex = partition(arr, start, end);
+    k = nums.length - k;
     
-    if (k < arr.length - pivotIndex) {
-        return quickSelect(arr, pivotIndex + 1, end, k);
-    } else if (k > arr.length - pivotIndex) {
-        return quickSelect(arr, start, pivotIndex - 1, k);
-    }
-    
-    return arr[pivotIndex];
-}
-
-function partition(arr, start, end) {
-    const pivot = arr[end];
-    let i = start;
-    let j = end - 1;
-    
-    while (i <= j) {
-        while (arr[i] < pivot) {
-            i++;
-        }
-        while (arr[j] > pivot) {
-            j--;
-        }
+    function quickSelect(left, right) {
+        let pivot = nums[right];
+        let p = left;
         
-        if (i <= j) {
-            swap(arr, i, j);
-            i++;
-            j--;
+        for(let i = left; i < right; i++) {
+            if (nums[i] <= pivot) {
+                let temp = nums[p];
+                nums[p] = nums[i];
+                nums[i] = temp;
+                p++;
+            }
         }
+        let temp = nums[p];
+        nums[p] = nums[right];
+        nums[right] = temp;
+        
+        if (p > k) return quickSelect(left, p - 1);
+        if (p < k) return quickSelect(p + 1, right);
+        else       return nums[p];
+
     }
     
-    swap(arr, i, end);
-    
-    return i;
-}
-
-function swap(arr, i, j) {
-    [arr[i], arr[j]] = [arr[j], arr[i]]
-}
+    return quickSelect(0, nums.length - 1);
+};
