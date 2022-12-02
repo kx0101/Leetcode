@@ -3,20 +3,29 @@
  * @return {number}
  */
 var countNegatives = function(grid) {
-    let n = grid[0].length;
-    let m = grid.length;
-    let row = m - 1;
-    let col = 0;
     let res = 0;
     
-    while (row >= 0 && col < n) {
-        if (grid[row][col] >= 0) {
-            col++;
-        } else {
-            res += n - col;
-            row--;
-        }
+    for(let i = 0; i < grid.length; i++) {
+        res += negativeEachRow(grid[i]);
     }
     
     return res;
 };
+
+function negativeEachRow(row) {
+    let res = 0;
+    let [left, right] = [0, row.length - 1];
+    
+    while (left <= right) {
+        let mid = Math.floor((left + right) / 2);
+        
+        if (row[mid] >= 0) {
+            left = mid + 1;
+        } else if (row[mid] < 0) {
+            res += right - mid + 1;
+            right = mid - 1;
+        }
+    }
+    
+    return res;
+}
