@@ -4,12 +4,12 @@
  * @return {number[]}
  */
 var shuffle = function(nums, n) {
-    let shuffledArray = new Array(2 * n);
+    let result = []
 
     for (let i = 0; i < n; i++) {
-        shuffledArray[2 * i] = nums[i];
-        shuffledArray[2 * i + 1] = nums[n + i];
+        result.push(nums[i]);
+        result.push(nums[i + n]);
     }
 
-    return shuffledArray;
+    return result;
 };
